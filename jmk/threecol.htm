@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<link rel="stylesheet" type="text/css" href="styles.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Dynamic Drive: CSS Liquid Layout #3.1- (Fixed-Fluid-Fixed)</title>
+<style type="text/css">
+#topsection{
+background: #EAEAEA;
+height: 80px; /*Height of top section*/
+}
+
+#topsection h1{
+margin: 0;
+padding-top: 15px;
+}
+
+#contentwrapper{
+float: left;
+width: 100%;
+}
+
+#contentcolumn{
+margin: 0 200px 0 450px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+}
+
+#leftcolumn{
+float: left;
+width: 450px; /*Width of left column*/
+margin-left: -100%;
+background: #C8FC98;
+}
+
+#rightcolumn{
+float: left;
+width: 600px; /*Width of right column*/
+margin-left: -600px; /*Set left marginto -(RightColumnWidth)*/
+background: gray;
+}
+
+#footer{
+clear: left;
+width: 100%;
+background: black;
+color: #FFF;
+text-align: center;
+padding: 4px 0;
+}
+
+#footer a{
+color: #FFFF80;
+}
+
+.innertube{
+margin: 10px; /*Margins for inner DIV inside each column (to provide padding)*/
+margin-top: 0;
+}
+
+</style>
+
+<script type="text/javascript">
+/*** Temporary text filler function. Remove when deploying template. ***/
+var gibberish=["This is just some filler text", "Welcome to Dynamic Drive CSS Library", "Demo content nothing to read here"]
+function filltext(words){
+for (var i=0; i<words; i++)
+document.write(gibberish[Math.floor(Math.random()*3)]+" ")
+}
+</script>
+
+</head>
+<body>
+<div id="maincontainer">
+
+<div id="topsection"><div class="innertube"><h1>Apple Computers for Sale</h1></div></div>
+
+<div id="contentwrapper">
+<div id="contentcolumn">
+<div class="innertube"><b>Content Column: <em>Fluid</em></b> <script type="text/javascript">filltext(45)</script></div>
+</div>
+</div>
+
+<div id="leftcolumn">
+<div class="innertube"><ul class="specs">
+<li class="spec">Name:<span class="specname">iMac</span></li>
+<li class="spec">Model:<span class="specname">A1186 / Mid 2011</span></li>
+<li class="spec">Applecare:<span class="specname">June 1, 2014</span></li>
+<li class="spec">Software:<span class="specname">OSX 10.7.2 Lion</span></li>
+<li class="spec">CPU:<span class="specname">2.5GHz Intel Core i5</span></li>
+<li class="spec">RAM:<span class="specname">8GB 1067 MHZ DDR3</span></li>
+<li class="spec">HDD:<span class="specname">500GB</span></li>
+<li class="spec">Optical:<span class="specname">SuperDrive</span></li>
+<li class="spec">Video:<span class="specname">AMD Radeon HD 6750M 512MB</span></li>
+<li class="spec">Accessories:<span class="specname">Wireless Mouse & Keyboard, CDs</span></li>
+</ul></div>
+</div>
+
+<div id="rightcolumn">
+<div class="innertube">
+<img class="bigthumb" src="./images/IMG_0888.JPG" width="600" alt="image of a 2 subwoofers" />
+</div>
+</div>
+
+<div id="footer"><a href="http://www.dynamicdrive.com/style/">Dynamic Drive CSS Library</a></div>
+
+</div>
+</body>
+</html>

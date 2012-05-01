@@ -1,0 +1,147 @@
+/*
+body{
+margin: 0;
+padding: 0;
+border: 0;
+height: 100%; 
+max-height: 100%; 
+font-size:1.1em;
+font-family:Sans-Serif;
+}
+*/
+
+/* start index classes */
+body.picspage{
+overflow:hidden;
+}
+
+.maincontainer{
+width:80%;
+margin-left:auto;
+margin-right:auto;
+}
+
+.imgcontainer{
+margin:15px;
+margin-right:0;
+float:left;	
+}
+
+
+.thumb{
+display:block;
+padding: 10px;
+vertical-align: middle;
+background-color: #aaa;
+border: 1px solid black;
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.captionLink{
+display:block;
+width: 420px;
+height: 2.8em;
+padding-top:3px;
+float: left;
+color: black;
+text-decoration:none;
+background-color: gray;
+border: 1px solid black;
+border-top:0px;
+text-align: center;
+vertical-align: middle;
+-moz-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-moz-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+a.captionLink:link {
+
+}
+a.captionLink:visited {
+	
+}
+a.captionLink:hover {
+background-color:white;
+
+}
+a.captionLink:active {
+color:gray;
+}
+/* end index classes */
+/* start product page classes */
+
+.bigthumb{
+display:block;
+padding: 10px;
+margin:15px;
+vertical-align: middle;
+text-align:center;
+background-color: #aaa;
+border: 1px solid black;
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+-moz-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-moz-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.specs{
+padding-left:0;
+margin:15px;
+width:400px;
+border:1px solid black;
+list-style-type:none;
+}
+li.spec:nth-child(odd){
+background-color:gray;
+}
+li.spec:nth-child(odd){
+background-color:#AAA;
+}
+li.spec:nth-last-child(1){
+background-color:red;
+font-weight:bold;
+}
+
+.specname{
+position:absolute;
+left:125px;
+}
+
+.spectable{
+float:left;
+}
+
+.content{
+padding:10px;
+}
+
+.rightcol{
+float: right;
+width:550px;
+
+}
+
+.productheader{
+padding-top:0;
+width:100%;
+height:65px;
+background-color:gray;
+color:white;
+}
+
+.productheader h1{
+padding-left:30px;
+padding-top:10px;
+}
+span.content a{
+padding-left:15px;
+}

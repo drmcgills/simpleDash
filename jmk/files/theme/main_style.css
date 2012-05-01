@@ -1,0 +1,139 @@
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input{
+    margin:0;
+    padding:0;
+}
+ul{
+    list-style:none;
+}
+fieldset{
+    border:0;
+}
+a img{
+    border:0;
+}
+.clear{
+    clear:both;
+}
+
+
+body {
+    background: #f7f7f7 url(bodybg.jpg) repeat-x;
+    font-family: LucidaSans, arial, sans-serif;
+    font-size:12px;
+    color:#666666;
+    height: 100%;
+    margin:0;
+    padding:0;
+}
+
+a{
+    color: #5e9bd7;
+    text-decoration: none;
+}
+p {
+    line-height: 170%;
+    color: #666666;
+    font-size: 14px;
+    padding: 5px 0px 5px 0px;
+}
+h1 {
+    font-size:30px;
+    color:#333333;
+    line-height:1.5;
+    padding: 5px 0px 5px 0px;
+}
+h2 {
+    font-size:24px;
+    color:#333333;
+    font-weight: normal;
+    line-height:1.5;
+    padding: 5px 0px 5px 0px;
+}
+
+#wrapper {
+    width:960px;
+    margin: 0px auto;
+}
+
+.title{
+    width: 960px;
+    padding: 30px 0px 30px 0px;
+    font-size: 36px;
+    color: #666666;
+    background: url(headerbtm.jpg) bottom no-repeat;
+}
+
+#navigation{
+    position: relative;
+    width: 960px;
+    height: 38px;
+    z-index: 2;
+    background: url(navigationbg.jpg) no-repeat;
+}
+
+#navigation li{
+    float: left;
+    height: 38px;
+    z-index: 2;
+    padding: 0px 18px 0px 23px;
+}
+
+#navigation li a{
+    display: inline-block;
+    height: 25px;
+    color: #666666;
+    z-index: 2;
+    padding: 12px 0px 0px 0px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#navigation li a:hover{
+    background: url(navhover.gif) bottom center no-repeat;
+    text-decoration: none;
+}
+
+#navigation li#active a{
+    background: url(navhover.gif) bottom center no-repeat;
+}
+
+#header{
+    position: relative;
+    width: 920px;
+    height: 266px;
+    z-index: 1;
+    margin: 19px 0px 20px 0px;
+}
+
+.weebly_header{
+    background: url(%%HEADERIMG%%) no-repeat;
+}
+
+#weebly-menus .weebly-menu-wrap { z-index: 5000; }
+ #weebly-menus .weebly-menu { padding: 0; margin: 0; list-style: none; }
+ #weebly-menus .weebly-menu li { float: left; clear: left; width: 180px; text-align: left; }
+ #weebly-menus .weebly-menu li a { position: relative; display: block; width: 162px; background: #f5f5f5; border-top:  none; border-bottom: 1px solid #cccccc; border-right: 1px solid #cccccc; border-left: 1px solid #cccccc; text-decoration: none; font-size: 12px; font-weight: normal; line-height:1; padding: 8px 6px 8px 12px; color: #666666; }
+ #weebly-menus .weebly-menu li a:hover { background: #81b5e8; color: #fff; }
+
+#content{
+    width: 922px;
+    height:auto !important;
+    min-height:700px;
+    border-left: 1px solid #d3d3d3;
+    border-right: 1px solid #d3d3d3;
+    background: #ececec url(contentbg.jpg) repeat-x;
+    padding: 25px 18px 25px 18px;
+}
+
+
+#footer{
+    width: 960px;
+    color: #666666;
+    font-size: 12px;
+    text-align: right;
+    background: url(footerbg.jpg) top no-repeat;
+    padding: 30px 0px 30px 0px;
+}
+
+
+

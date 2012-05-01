@@ -1,0 +1,402 @@
+body{
+margin: 0;
+padding: 0;
+border: 0;
+overflow: hidden;
+height: 100%; 
+max-height: 100%; 
+font-size:1.1em;
+font-family:Sans-Serif;
+}
+
+#framecontentLeft{
+position: absolute; 
+top: 110px;
+left: 0; 
+width: 250px; /*Width of left frame div*/
+height: 100%;
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: #777777;
+color: black;
+}
+
+#currentPageLink {
+padding-left:5px;
+font-weight:bold;
+border: 1px solid white;
+border-top: 0;
+list-style-image:url("tri.png");
+}
+
+#topcurrentPageLink {
+padding-left:5px;
+font-weight:bold;
+border: 1px solid white;
+list-style-image:url("tri.png");
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+table#picturetable {
+width: 100%;
+border: 1px solid black;
+}
+
+td#imagebox {
+height: 200px;
+border: 1px solid black;
+text-align: center;
+}
+
+td#captionbox {
+border: 1px solid black;
+height: 30px;
+text-align: center;
+}
+
+img#thumbnail {
+height: 200px;
+width: 267px;	
+}
+
+.navlink{
+padding-left:5px;
+width:185px;
+color:black;
+background-color: #bbbbbb;
+display:block;
+border: 1px solid white;
+border-top:0;
+}
+.currentpagelink{
+padding-left:5px;
+width:185px;
+color:black;
+background-color: #bbbbbb;
+display:block;
+border: 1px solid white;
+border-top:0;
+text-decoration:none;
+}
+
+#topnavlink{
+border-top:1px solid white;
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;	
+}
+#bottomnavlink{
+-moz-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-moz-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;	
+}
+
+
+a.navlink:link {  /* unvisited link */
+
+}
+
+a.navlink:visited {  /* visited link */
+color:#404040;
+}
+
+a.navlink:hover {  /* mouse over link */
+color:red;
+background-color:#777777;
+
+}
+
+a.navlink:active {  /* selected link */
+color:#404040;
+background-color:#777777;
+
+}
+a.topnavlink:link {  /* unvisited link */
+color:black;
+background-color: #bbbbbb;
+}
+
+a.topnavlink:visited {  /* visited link */
+color:#404040;
+background-color: #bbbbbb;
+}
+
+a.topnavlink:hover {  /* mouse over link */
+color:red;
+background-color:#777777;
+border: 1px solid white;
+}
+
+a.topnavlink:active {  /* selected link */
+color:#404040;
+background-color:#777777;
+border: 1px solid white;
+}
+
+a.breadcrumbLink:link {
+color: black;
+}
+a.breadcrumbLink:visited {
+color: black;	
+}
+a.breadcrumbLink:hover {
+color: black;
+}
+a.breadcrumbLink:active {
+color: black;
+}
+
+a.picturelink:link {
+color: black;
+}
+a.picturelink:visited {
+color: black;
+}
+a.picturelink:hover {
+color: black;
+}
+a.picturelink:active {
+color: black;
+}
+
+#framecontentTop{ 
+left: 0; /*Set left value to WidthOfLeftFrameDiv*/
+top: 0;
+right: 0;
+width: 100%;
+height: 110px; /*Height of top frame div*/
+overflow: hidden; /*Disable scrollbars. Set to "scroll" to enable*/
+background-color: white;
+color: red;
+text-align: center;
+}
+
+#breadcrumb {
+position: fixed;
+left: 250px;
+top: 110px;
+margin: 0;
+padding: 0;
+height: 30px;
+width: 100%;
+color: white;
+background-color: red;
+color: black;
+}
+#footerlinks{
+padding-top:10px;
+text-align:center;
+display:block;
+clear:both;
+}
+
+
+.footlink{
+display:inline;
+color:black;
+text-decoration:none;
+padding-left:15px;
+padding-right:15px;
+border-right:2px solid black;
+
+}
+#footlinkend{
+border-right:0;	
+}
+a.footlink:link{
+
+}
+a.footlink:hover{
+background-color:red;
+}
+a.footlink:active{
+
+}
+a.footlink:visited{
+
+}
+#maincontent{
+position: fixed; 
+left: 250px; /*Set left value to WidthOfLeftFrameDiv*/
+top: 140px; /*Set top value to HeightOfTopFrameDiv*/
+right: 0;
+bottom: 0;
+overflow: scroll; 
+background: #fff;
+}
+
+#mainheader {
+font-size:2em;
+}
+
+#secondheader {
+font-size:1em;
+}
+
+#headertable {
+position: absolute;
+margin: 0;
+padding: 0;
+border: 0;
+top: 0;
+left: 0;
+width: 100%;
+}
+
+#headerimage{
+	position:relative;
+top: 5px;
+}
+
+#rheaderimg {
+position: absolute;
+top: 0;
+left: 85%;
+width: 15%;
+background-color: black;
+height: 110px;
+border: 0;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+}
+
+#centerheader {
+top: 0;
+left: 15%;
+width: 100%;
+height: 110px;
+background-color: black;
+border: 0;
+padding: 0;
+margin: 0;
+vertical-align: middle;
+}
+
+
+#lheaderimg {
+position: absolute;
+top: 0;
+left: 0;
+width: 15%;
+background-color: black;
+height: 110px;
+border: 0;
+padding: 0;
+margin: 0;
+}
+#rightheaderimage{
+position:absolute;
+right:100px;
+top:5px;
+float:right;
+}
+#leftheaderimage{
+position: absolute;
+top: 5px;
+left: 100px;
+}
+#navlist{
+position:absolute;
+left:5px;	
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+-moz-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-moz-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.innertube{
+margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+}
+
+p#imgnote {
+font-size: 0.8em;	
+}
+
+.imgbox{
+width: 420px;
+height: 320px;
+vertical-align: middle;
+background-color: red;
+border: 1px solid black;
+
+}
+
+.captionbox {
+width: 420px;
+height: 1.5em;
+float: left;
+color: white;
+background-color: gray;
+border: 1px solid black;
+border-top:0px;
+text-align: center;
+
+}
+
+
+
+.imgcontainer{
+margin:15px;
+margin-right:0;
+float:left;	
+}
+
+
+.thumb{
+display:block;
+padding: 10px;
+vertical-align: middle;
+background-color: red;
+border: 1px solid black;
+-moz-border-top-left-radius: 5px;
+border-top-left-radius: 5px;
+-moz-border-top-right-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.captionLink{
+display:block;
+width: 420px;
+height: 1.5em;
+float: left;
+color: black;
+text-decoration:none;
+background-color: gray;
+border: 1px solid black;
+border-top:0px;
+text-align: center;
+vertical-align: middle;
+-moz-border-bottom-left-radius: 5px;
+border-bottom-left-radius: 5px;
+-moz-border-bottom-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+a.captionLink:link {
+
+}
+a.captionLink:visited {
+	
+}
+a.captionLink:hover {
+background-color:white;
+
+}
+a.captionLink:active {
+color:red;
+}
+.comps{
+background-image: url('tri2.png');
+background-position: left;
+background-repeat:no-repeat;
+text-indent: 10px;
+}
