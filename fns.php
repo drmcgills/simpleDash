@@ -1,49 +1,4 @@
-<html><title></title>
-<link rel="stylesheet" type="text/css" href="styles.css" />
-<link rel="apple-touch-icon" href="apple.png"></head>
-<body>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="dash.js"></script>
-<div class="header">SUPER AWESOME WEBSITE</div>
-<div class="navlinks">
-	<a href="./">Home</a>
-	<a href="./?newpost">New Post</a>
-</div>
-<br />
 <?php
-#include("fns.php");
-try
-{
-	$dbh = new PDO("mysql:host=localhost;dbname=my_db","web","Passw0rd01");
-}
-catch(PDOException $e)
-{  
-    echo $e->getMessage();  
-}  
-if(isset($_GET['p']))
-{
-	hardlink($_GET['p']);
-}
-elseif(isset($_GET['u']))
-{
-	userposts($_GET['u']);
-}
-elseif(isset($_GET['newpost']))
-{
-	newpost();
-}
-elseif(isset($_GET['edit']))
-{
-	editpost($_GET['id']);
-}
-else
-{
-	if((isset($_POST['title'])) && (isset($_POST['content']) || isset($_POST['image'])))
-	{
-		addpost();
-	}
-	printallposts();
-}
 function prettydate($datevalue, $mode)
 {
 	#for mode "/" would mean 10/25/2011, "-" would mean 10-20-2011
@@ -80,22 +35,30 @@ function hardlink($postid)
 			echo '<br /><img class="postimage" src="' . $row['image'] . '" />';
 		}
 		echo '</div>';
+		// if($row['time'] != '00:00:00')
+		// { 
+			// echo '<div class="postdate"><a href="editpost.php?p=' . $row['postid'] . '">edit</a> Post #<a href="./?p=' . $row['postid'] . '">' . $row['postid'] . '</a> on ' . prettydate($row['date'], "-") . ' at ' . $row['time'] . ' by <b>' . $row['user'] . '</b></div></div>';
+		// }
+		// else
+		// {
+			// echo '<div class="postdate"><a href="editpost.php?p=' . $row['postid'] . '">edit</a> Post #<a href="./?p=' . $row['postid'] . '">' . $row['postid'] . '</a> on ' . $row['date'] . ' by <b>' . $row['user'] . '</b></div></div>';
+		// }
 		if($row['time'] != '00:00:00') { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href=./?p="<?php echo $row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
 				at <?php echo $row['time'] ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
 		else { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href="<?php echo './?p='.$row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
@@ -121,20 +84,20 @@ function printallposts()
 		echo '</div>';
 		if($row['time'] != '00:00:00') { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href="<?php echo './?p='.$row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
 				at <?php echo $row['time'] ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
 		else { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href="<?php echo './?p='.$row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
@@ -194,20 +157,20 @@ function userposts($username)
 		echo "</div>";
 		if($row['time'] != '00:00:00') { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href="<?php echo './?p='.$row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
 				at <?php echo $row['time'] ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
 		else { ?>
 			<div class="postdate">
-				<a href="./?edit&id=<?php echo $row['postid'] ?>">edit</a>
+				<a href="editpost.php?p="<?php echo $row['postid'] ?>">edit</a>
 				Post #<a href="<?php echo './?p='.$row['postid'] ?>"><?php echo $row['postid'] ?></a>
 				on <?php echo prettydate($row['date'], "-") ?>
-				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></a></b>
+				by <b><a href="./?u=<?php echo $row['user'] ?>"><?php echo $row['user'] ?></b></a>
 				</div>
 			</div>
 		<?php }
@@ -224,45 +187,15 @@ function newpost()
 		// echo $sth->errorInfo();
 	// }
 	?>
-		<form action="index.php" method="post" enctype="multipart/form-data" id="newpost">
+		<form action="index.php" method="post" enctype="multipart/form-data">
 			<div class="post">
 				<div class="postheader"><input type="text" name="title" value="title" /></div>
 				<div class="postbody">
-					<textarea name="content">body content</textarea>
-					<input type="hidden" name="posttype" value="new" />
-					<input type="hidden" name="user" value="john" />
+					<input type="textarea" name="content">body content</textarea>
 					<br />
+					<input type="hidden" name="user" value="john" />
 					<input type="text" name="image" value="image url" /><input type="submit" />
 				</div>
 			</div>
 		</form>
-	<?php }
-function editpost($postid)
-{
-	global $dbh;
-	$sth = $dbh->prepare("SELECT * FROM dash WHERE postid=:postid");
-	$sth->bindParam(':postid',$postid,PDO::PARAM_STR);
-	$success = $sth->execute();
-	while($row = $sth->fetch()){
-	?>
-		<form action="index.php" method="post" enctype="multipart/form-data">
-			<div class="post">
-				<div class="postheader"><input class="input" type="text" name="title" value="<?php echo $row['title'] ?>" /></div>
-				<div class="postbody">
-					<textarea name="content"><?php echo $row['content'] ?></textarea>
-					<input type="hidden" name="posttype" value="edit" />
-					<input type="hidden" name="user" value="john" />
-					<input type="hidden" name="postid" value=" <?php echo $postid ?>" />
-					<br />
-					<input type="text" name="image" value="<?php echo $row['image'] ?>" /><input type="submit" value="commit" />
-				</div>
-			</div>
-		</form>
-	<?php }
-}
-function printapost($postid)
-{
-
-}
-?>
-</body></html>
+	<?php}
